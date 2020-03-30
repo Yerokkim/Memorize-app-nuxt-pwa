@@ -1,8 +1,17 @@
 <template>
   <div>
     <div v-for="list in lists" :key="list.index">
-      <p>{{ list.voca }}</p>
-      <p>{{ list.meaning }}</p>
+      <v-card>
+        <v-list-item>
+          <p>Vocabulary: {{ list.voca }}</p>
+          <p>meaning:{{ list.meaning }}</p>
+          <v-list-item-action>
+            <v-btn icon>
+              <v-icon color="grey lighten-1">mdi-information</v-icon>
+            </v-btn>
+          </v-list-item-action>
+        </v-list-item>
+      </v-card>
     </div>
   </div>
 </template>
